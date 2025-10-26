@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>视觉N-Back任务</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>视觉N-Back任务</h1>
+        
+        <div class="instructions">
+            <p>任务说明：观察屏幕上出现的字母，判断当前字母是否与<span id="n-value-display-1">1</span>个位置前的字母相同。</p>
+            <p>点击"相同"按钮表示当前字母与<span id="n-value-display-2">1</span>个位置前的字母相同。</p>
+            <p>点击"不同"按钮表示当前字母与<span id="n-value-display-3">1</span>个位置前的字母不同。</p>
+        </div>
+
+        <div class="params-container">
+            <div class="param-group">
+                <label for="n-value">N值:</label>
+                <select id="n-value">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="stimulus-container">
+            <div id="stimulus"></div>
+        </div>
+
+        <div class="status-container">
+            <p id="status">准备就绪</p>
+            <p id="result"></p>
+        </div>
+
+        <div class="button-container">
+            <div class="response-buttons">
+                <button id="same-button" disabled>相同</button>
+                <button id="different-button" disabled>不同</button>
+            </div>
+            <div class="control-export-stop-buttons">
+                <button id="start-button">开始</button>
+                <button id="export-button">导出数据</button>
+                <button id="stop-button" disabled>终止</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="nback.js"></script>
+</body>
+</html>
